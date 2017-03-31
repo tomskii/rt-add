@@ -1,0 +1,55 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Check your answers
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+      <h1 class="heading-large">
+        Check your answers
+      </h1>
+    </div>
+  </div>
+
+  <div class="form-group">
+
+    <table class="check-your-answers">
+
+      <thead>
+        <tr>
+          <th colspan="2">
+            <h2 class="heading-medium">
+              Your details
+            </h2>
+          </th>
+          <th>
+          </th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <td>
+            Your Registered Traveller number
+          </td>
+          <td>
+            {{regNumber}}
+          </td>
+          <td class="change-answer">
+            <a href="/kids1/reg-number">
+              Change <span class="visuallyhidden">your Registered Traveller number</span>
+            </a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+</main>
+
+{% endblock %}

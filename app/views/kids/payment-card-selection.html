@@ -1,0 +1,62 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Card selection
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  <form action="/make-payment" method="post" class="form">
+                  <input type="hidden" name="_csrf" value="GQQpyQP7-0j5iDSEZWyfoRY5zZngJAvQMrDk">
+                  <input type="hidden" name="objectId" value="5788a0203730e9e5778e41d6" />
+                  <h1 class="heading-medium" data-lang="eng">Select your credit or debit payment method</h1>
+                  <div class="form-group">
+                      <fieldset id="card">
+  												<div class="split-width clearfix">
+                          <p data-lang="eng">Charge: £XX</p>
+
+  											</div>
+
+                        <label for="visa" class="block-label">
+                          <input id="visa" type="radio" name="card" value="visa">
+                          VISA
+                        </label>
+
+                        <label for="master" class="block-label">
+                          <input id="master" type="radio" name="card" value="master">
+                          Mastercard
+                        </label>
+
+                        <label for="maestro" class="block-label">
+                          <input id="maestro" type="radio" name="card" value="maestro">
+                          Maestro
+                        </label>
+
+                        <label for="japan" class="block-label">
+                          <input id="japan" type="radio" name="card" value="japan">
+                          Japanese Credit Bank
+                        </label>
+
+                        <label for="amex" class="block-label">
+                          <input id="amex" type="radio" name="card" value="amex">
+                          American Express
+                        </label>
+
+                      </fieldset>
+
+  								<div class="more-margin-bottom clearfix">
+                  <div class="panel-indent" data-lang="eng"><p>After you've paid on WorldPay we will confirm receipt of your application and payment. You cannot amend this application after you have paid.</p></div>
+  							</div>
+                  <!-- Submit -->
+
+  								<div class="form-group">
+  									<a class="button" href="payment" id="continuebutton">Continue to payment</a>
+  								</div>
+
+  								</div>
+              </form>
+
+</main>
+
+{% endblock %}
