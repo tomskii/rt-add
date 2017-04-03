@@ -19,9 +19,9 @@ $( document ).ready(function() {
 
   (function($){
     $(function(){
-      $('#country-selector').val('');
+      $('#countryselector').val('');
       $("#countries").submit(function( event ) {
-        var selectValue = $('#country-selector').val();
+        var selectValue = $('#countryselector').val();
         if (_.includes(['Hong Kong', 'Japan', 'Malaysia', 'Singapore',
               'Korea, Republic of', 'Taiwan', 'Brunei Darussalam', 'Israel', 'Canada', 'United States', 'Argentina',
               'Belize', 'Brazil', 'Chile', 'El Salvador', 'Guatemala', 'Honduras', 'Mexico',
