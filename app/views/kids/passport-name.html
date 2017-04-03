@@ -11,7 +11,10 @@
     <div class="column-two-thirds">
 
       <a class="link-back" href="javascript:history.go(-1)">Back</a>
-      <form action="/inputname" method="get" class="form" name="test-form">
+
+      <form action="date-of-birth" method="post" class="form">
+
+    <!--  <form action="/inputname" method="get" class="form" name="test-form"> -->
       <h1 class="heading-medium">
         What is your child’s full name as written in their passport?
       </h1>
@@ -36,7 +39,7 @@
               </legend>
 
               <label for="no" class="block-label">
-                <input id="no" type="radio" name="othernames" value="no">
+                <input id="no" type="radio" name="othernames" value="None" {{ checked("othernames","None") }}>
                 No
               </label>
 
@@ -44,9 +47,6 @@
                 <input id="yes" type="radio" name="othernames" value="yes">
                 Yes
               </label>
-
-
-
               <div class="panel panel-border-narrow js-hidden" id="add-other-names">
 
                 <h2 class="heading-medium">
@@ -62,13 +62,13 @@
                   <div class="form-group">
                     <label class="form-label-bold" for="address-line-1">Their other surname</label>
                     <span class="form-label">Enter this even if it hasn’t changed</span>
-                    <input class="form-control" type="text" id="address-line-1">
+                    <input class="form-control" type="text" id="address-line-1" name="otherlastname" value="{{otherlastname}}">
                   </div>
 
                   <div class="form-group">
                     <label class="form-label-bold" for="address-line-1">Their other given names</label>
                     <span class="form-label">Include any middle names. Enter these even if they haven’t changed</span>
-                    <input class="form-control" type="text" id="address-line-1">
+                    <input class="form-control" type="text" id="address-line-1" name="otherfirstname" value="{{otherfirstname}}">
                   </div>
 
                 </fieldset>
@@ -78,7 +78,7 @@
             </fieldset>
           </div>
         <div class="form-group">
-          <a href="date-of-birth.html" class="button">Continue</a>
+          <input type="submit" class="button" value="Continue">
         </div>
 
     </div>

@@ -16,7 +16,7 @@
         What is your child's date of birth as written in their passport?
       </h1>
 
-      <form class="form">
+      <form action="summary" method="post" class="form">
         <div class="form-group">
           <fieldset>
 
@@ -26,17 +26,17 @@
 
               <div class="form-group form-group-day">
                 <label for="dob-day">Day</label>
-                <input class="form-control" id="w" type="number" pattern="[0-9]*" min="0" max="31" value="{{dobday}}">
+                <input class="form-control" id="w" type="number" pattern="[0-9]*" min="0" max="31" name="dobday" value="{{dobday}}">
               </div>
 
               <div class="form-group form-group-month">
                 <label for="dob-month">Month</label>
-                <input class="form-control" id="dob-month" type="number" pattern="[0-9]*" min="0" max="12" value="{{dobmonth}}">
+                <input class="form-control" id="dob-month" type="number" pattern="[0-9]*" min="0" max="12" name="dobmonth" value="{{dobmonth}}">
               </div>
 
               <div class="form-group form-group-year">
                 <label for="dob-year">Year</label>
-                <input class="form-control" id="dob-year" type="number" pattern="[0-9]*" min="0" max="2014" value="{{dobyear}}">
+                <input class="form-control" id="dob-year" type="number" pattern="[0-9]*" min="0" max="2014" name="dobyear" value="{{dobyear}}">
               </div>
             </div>
 
@@ -72,7 +72,7 @@
 
         </div>
         <div class="form-group">
-          <a class="button" href="summary">Continue</a>
+          <input type="submit" class="button" value="Continue">
         </div>
       </form>
 

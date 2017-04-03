@@ -16,15 +16,10 @@
         What is your child’s passport number?
       </h1>
       <p>Use the number on their passport photo page, include any zeros at the start</p>
-      <form class="form" name="test-form">
+      <form action="passport-name" method="post" class="form">
         <div class="form-group">
           <fieldset>
-
-            <legend class="visuallyhidden">
-              Select which of these applies to you
-            </legend>
-
-            <input type="text" class="form-control" id="passport-number" name="passport-number">
+            <input type="text" class="form-control" id="passport-number" name="passportnumber" value="{{passportnumber}}">
 
           </fieldset>
         </div>
@@ -36,15 +31,15 @@
               <p>For example, 30 04 2024</p>
               <div class="form-group form-group-day">
                 <label for="exp-day">Day</label>
-                <input class="form-control" id="exp-day" name="exp-day" type="number" pattern="[0-9]*" min="0" max="31">
+                <input class="form-control" id="exp-day" type="number" pattern="[0-9]*" min="0" max="31" name="expday" value="{{expday}}">
               </div>
               <div class="form-group form-group-month">
                 <label for="exp-month">Month</label>
-                <input class="form-control" id="exp-month" name="exp-month" type="number" pattern="[0-9]*" min="0" max="12">
+                <input class="form-control" id="exp-month" type="number" pattern="[0-9]*" min="0" max="12" name="expmonth" value="{{expmonth}}">
               </div>
               <div class="form-group form-group-year">
                 <label for="exp-year">Year</label>
-                <input class="form-control" id="exp-year" name="exp-year" type="number" pattern="[0-9]*" min="0" max="2014">
+                <input class="form-control" id="exp-year" type="number" pattern="[0-9]*" min="0" max="2054" name="expyear" value="{{expyear}}">
               </div>
             </div>
           </fieldset>
@@ -52,7 +47,7 @@
 
 
         <div class="form-group">
-          <a class="button" href="passport-name">Continue</a>
+          <input type="submit" class="button" value="Continue">
         </div>
 
       </form>
