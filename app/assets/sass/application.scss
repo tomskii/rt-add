@@ -78,3 +78,27 @@ $path: "/public/images/";
     padding: 10px 0 0px;
     color: #B10E1E;
 }
+.visa {
+    background-image: url(/public/images/visa-2x.png);
+}
+.mastercard {
+    background-image: url(/public/images/mastercard-2x.png);
+}
+.maestro {
+    background-image: url(/public/images/maestro-2x.png);
+}
+.jcb {
+    background-image: url(/public/images/JCB-2x.png);
+}
+.amex {
+    background-image: url(/public/images/amex-2x.png);
+    height: 2.2em;
+}
+.card {
+    float: left;
+    width: 51px;
+    height: 32px;
+    margin: -5px 10px 0 0;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}

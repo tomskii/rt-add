@@ -121,7 +121,7 @@ if (env === 'production' && useHttps === 'true') {
 console.log({'autodata': useAutoStoreData})
 
 if (useAutoStoreData === 'true') {
-  app.post('*', utils.autoStoreData)
+  app.use(utils.autoStoreData)
   app.use(function (req, res, next) {
     // add nunjucks function to get values, needs to be here as they need access to req.session
 
