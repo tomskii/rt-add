@@ -31,7 +31,7 @@ if (answer === 'kidstourism') {
    res.redirect('/kids/kidsrestrictions')
 
  } else {
-     res.render('restrictions')
+     res.render('kids/kidsrestrictions')
    }
 })
 

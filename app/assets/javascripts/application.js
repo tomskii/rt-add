@@ -26,3 +26,6 @@ $(document).ready(function () {
   var showHideContent = new GOVUK.ShowHideContent()
   showHideContent.init()
 })
+$('.clearStorage').click(function(){
+    localStorage.clear();
+  });

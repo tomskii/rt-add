@@ -1,8 +1,8 @@
 // Config
 /* global $ */
-var defaultErrorHeading = 'There\'s been a problem'
+var defaultErrorHeading = 'There\'s a problem'
 var defaultErrorDescription = 'Check the following'
-var defaultErrorMessage = 'There is an error'
+var defaultErrorMessage = ''
 
 function clearValidation () {
   $('.error-summary').remove()
@@ -83,9 +83,6 @@ function appendErrorSummary () {
         '<h1 class="heading-medium error-summary-heading" id="error-summary-heading">' +
           defaultErrorHeading +
         '</h1>' +
-        '<p>' +
-          defaultErrorDescription +
-        '</p>' +
         '<ul class="error-summary-list">' +
         '</ul>' +
       '</div>'

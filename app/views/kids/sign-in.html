@@ -9,21 +9,18 @@
 <main id="content" role="main">
   <div class="grid-row">
     <div class="column-two-thirds">
-
+<form action="nationality" method="post" class="form">
       <div class="form-group">
 <h1 class="heading-large">Add a child to your membership</h1>
-		<fieldset class="inline">
-				<div class="form-group " data-group-name="passportNumber">
-						<label class="form-label-bold label signinlabel" for="passportNumber" data-label="Passport number">
-								Registered Traveller number</label>
-						<input autocomplete="off" type="text" class="form-control" id="passportNumber"
-									 name="passportNumber" aria-required="true" value=""
-									 ondragstart=”return false” onselectstart=”return false” onpaste="return false">
+
+				<div class="form-group">
+          <fieldset>
+						<label class="form-label-bold label signinlabel" for="passportNumber">Registered Traveller number</label>
+						<input type="text" class="form-control" id="passportNumber" name="passportNumber">
+          </fieldset>
 				</div>
-		</fieldset>
 
-
-<div class="date-group" data-group-name="passportExpiry">
+<div class="date-group">
 		<fieldset>
 				<label class="form-label-bold date-field label signinlabel" for="passportExpiry" data-label="Passport expiry date">
 						Your date of birth <span class="visuallyhidden">expected format is DD/MM/YYY</span></label>
@@ -50,10 +47,10 @@
 </div>
 
 	<div class="form-group">
-		<a class="button clearStorage" href="nationality.html" id="continuebutton">Continue</a>
+    <input class="button clearStorage" type="submit" value="Continue">
 	</div>
 
-
+</form>
     </div>
   </div>
 </main>
