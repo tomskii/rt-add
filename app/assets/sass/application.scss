@@ -69,15 +69,18 @@ $path: "/public/images/";
 }}
 
 
-.countryHint p {
-    padding: 0 0 15px 10px;
+.countryHint.red p {
+    padding: 0;
     font-weight: bold;
-}
-.countryHint {
-    border-left: 8px #B10E1E solid;
-    padding: 10px 0 0px;
     color: #B10E1E;
 }
+.countryHint.red {
+    border-left: 8px #B10E1E solid;
+    padding: 10px 0 15px 15px;
+}
+.countryHint.red input {border-color: #B10E1E;}
+
+
 .visa {
     background-image: url(/public/images/visa-2x.png);
 }

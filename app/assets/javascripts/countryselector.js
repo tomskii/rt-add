@@ -10,7 +10,8 @@
           window.location.href = 'why-are-you-coming.html';
           event.preventDefault();
         } else if (_.includes([''], selectValue)){
-          $(".countryHint").show();
+          $(".countryHint").addClass('red');
+          $(".countryHinttext").show();
           event.preventDefault();
         } else {
           window.location.href = 'ineligible.html';
