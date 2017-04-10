@@ -31,7 +31,7 @@ if (answer === 'kidstourism') {
    res.redirect('/kids/resident-visa')
 
  } else if (answer === 'kidsdiplomatic') {
-   res.redirect('/kids/kidsconvictions')
+   res.redirect('/kids/kidsrestrictions')
 
  } else {
      res.render('kids/kidsrestrictions')
@@ -139,4 +139,29 @@ if (regulations === 'no') {
    res.render('kids2/ineligible')
    }
 })
+
+// kids2 resident visa laogic
+router.get('/kids2/resident-gotvisa', function (req, res) {
+  var kids2residentvisa = req.query.kids2residentvisa
+
+if (kids2residentvisa === 'no') {
+   res.redirect('/kids2/resident-gotvisa-no')
+ } else {
+   res.render('kids2/resident-gotvisa-yes')
+   }
+})
+
+// kids study visa logic
+router.get('/kids2/study-gotvisa', function (req, res) {
+  var kids2studyvisa = req.query.kids2studyvisa
+
+if (kids2studyvisa === 'no') {
+   res.redirect('/kids2/ineligible')
+ } else {
+   res.render('kids2/kidsconvictions')
+   }
+})
+
+
+
 module.exports = router
