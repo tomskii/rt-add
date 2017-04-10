@@ -8,6 +8,9 @@ router.get('/', function (req, res) {
 
 // add your routes here
 
+
+
+// ------------ start of kids v1 logic ----------------
 router.get('/eligible', function (req, res) {
   // get the answer from the query string (eg. ?answer=a)
   var answer = req.query.answer
@@ -28,7 +31,7 @@ if (answer === 'kidstourism') {
    res.redirect('/kids/resident-visa')
 
  } else if (answer === 'kidsdiplomatic') {
-   res.redirect('/kids/kidsrestrictions')
+   res.redirect('/kids/kidsconvictions')
 
  } else {
      res.render('kids/kidsrestrictions')
@@ -71,4 +74,69 @@ if (convictions === 'yes' || regulations === 'yes' || restrictions === 'yes') {
    }
 })
 
+// ------------ end of kids v1 logic ----------------
+
+
+// ------------ start of kids v2 logic ----------------
+
+router.get('/kids2reason', function (req, res) {
+  // get the answer from the query string (eg. ?answer=a)
+  var answer = req.query.answer
+
+if (answer === 'kids2tourism') {
+  res.redirect('/kids2/kidsconvictions')
+
+} else if (answer === 'kids2transit') {
+   res.redirect('/kids2/kidsconvictions')
+
+ } else if (answer === 'kids2medical') {
+   res.redirect('/kids2/kidsconvictions')
+
+ } else if (answer === 'kids2study') {
+   res.redirect('/kids2/study-visa')
+
+ } else if (answer === 'kids2resident') {
+   res.redirect('/kids2/resident-visa')
+
+ } else if (answer === 'kids2diplomatic') {
+   res.redirect('/kids2/kidsconvictions')
+
+ } else {
+     res.render('kids2/kidsconvictions')
+   }
+})
+
+// kids2 convictions laogic
+router.get('/kids2/kids-convictions-page', function (req, res) {
+  var convictions = req.query.convictions
+
+if (convictions === 'no') {
+   res.redirect('/kids2/kidsrestrictions')
+ } else {
+   res.render('kids2/ineligible')
+   }
+})
+
+// kids2 restrictions laogic
+router.get('/kids2/kids-restrictions-page', function (req, res) {
+  var restrictions = req.query.restrictions
+
+if (restrictions === 'no') {
+   res.redirect('/kids2/kidsregulations')
+ } else {
+   res.render('kids2/ineligible')
+   }
+})
+module.exports = router
+
+// kids2 restrictions laogic
+router.get('/kids2/kids-regulations-page', function (req, res) {
+  var regulations = req.query.regulations
+
+if (regulations === 'no') {
+   res.redirect('/kids2/passport-number')
+ } else {
+   res.render('kids2/ineligible')
+   }
+})
 module.exports = router

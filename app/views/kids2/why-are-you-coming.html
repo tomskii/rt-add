@@ -1,0 +1,66 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Registered Traveller
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <a class="link-back" href="javascript:history.go(-1)">Back</a>
+
+      <h1 class="heading-medium">
+        Why is your child coming to the UK with you?
+      </h1>
+
+      <form action="/kids2reason" method="get" class="form">
+        <div class="form-group">
+          <fieldset>
+
+
+            <label for="kids2tourism" class="block-label">
+              <input id="kid2stourism" type="radio" name="answer" value="kids2tourism">
+              Tourism (including visiting family or friends)
+            </label>
+
+            <label for="kids2resident" class="block-label">
+              <input id="kids2resident" type="radio" name="answer" value="kids2resident">
+              They are a resident in the UK
+            </label>
+
+            <label for="kids2study" class="block-label">
+              <input id="kids2study" type="radio" name="answer" value="kids2study">
+              To study
+            </label>
+
+            <label for="kids2transit" class="block-label">
+              <input id="kids2transit" type="radio" name="answer" value="kids2transit">
+              Passing through the UK (in transit)
+            </label>
+
+            <label for="kids2diplomatic" class="block-label">
+              <input id="kids2diplomatic" type="radio" name="answer" value="kids2diplomatic">
+              As a member of a diplomatic household
+            </label>
+
+            <label for="kids2medical" class="block-label">
+              <input id="kids2medical" type="radio" name="answer" value="kids2medical">
+              For private medical treatment
+            </label>
+
+          </fieldset>
+        </div>
+        <div class="form-group">
+          <input class="button" type="submit" value="Continue">
+        </div>
+
+      </form>
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}

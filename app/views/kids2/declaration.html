@@ -1,0 +1,49 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Declaration
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+<h1 class="heading-medium">Declaration</h1>
+  <div class="form-group">
+	<p class="form-label-bold label">I confirm that:</p>
+	<ul class="list list-bullet text">
+		<li>the information supplied is complete, true and correct to the best of my knowledge</li>
+		<li>I have read, understood and accept the <a href="#">terms and conditions</a> and the <a href="#">privacy policy</a> of the Registered Traveller service</li>
+		<li>I will email Border Force at <a href="#">RTinbox@homeoffice.gsi.gov.uk</a> if circumstances change, or any new information relevant to my application becomes available</li>
+</ul>
+
+
+<br>
+	<p class="form-label-bold label">I understand that:</p>
+	<ul class="list list-bullet text">
+		<li>my details and my children's may in certain circumstances be passed to fraud prevention agencies to prevent and detect fraud and money laundering</li>
+		<li>other agencies may provide Border Force with information about me and my children</li>
+		<li>there is a £20 non-refundable fee to apply to add a child to my membership and a £2 per month membership fee up to the end of my membership</li>
+	</ul>
+</div>
+
+
+
+<div class="form-group">
+        <form name="saveDetails">
+
+
+            <label for="nationality_other" class="block-label" data-target="example_nationality_other">
+              <input type="checkbox" name="nationality_other" value="Wales" id="nationality_other">
+              I understand and agree with the above declarations
+            </label>
+
+        </form>
+        </div>
+
+	<div class="form-group">
+		<a class="button" href="payment-card-selection" id="continuebutton">Confirm</a>
+	</div>
+
+</main>
+
+{% endblock %}
