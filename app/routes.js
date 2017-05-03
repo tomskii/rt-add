@@ -162,6 +162,17 @@ if (kids2studyvisa === 'no') {
    }
 })
 
+// kids resident got visa no page /kids2/resident-gotvisa-no
 
+router.get('/kids2residentnoreason', function (req, res) {
+  // get the answer from the query string (eg. ?answer=a)
+  var residentgotvisano = req.query.residentgotvisano
+
+if (residentgotvisano === 'noneofthese') {
+  res.redirect('/kids2/ineligible')
+ } else {
+     res.render('kids2/kidsconvictions')
+   }
+})
 
 module.exports = router

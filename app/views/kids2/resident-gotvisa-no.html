@@ -16,7 +16,7 @@
         Which of these do they have?
       </h1>
 
-      <form action="/kids/resident-gotvisa-no" method="get" class="form">
+      <form action="/kids2residentnoreason" method="get" class="form">
         <div class="form-group">
           <fieldset>
 
@@ -39,11 +39,16 @@
               <input id="eea" type="radio" name="residentgotvisano" value="eea">
               EEA indefinite leave
             </label>
-            
+
+            <label for="noneofthese" class="block-label">
+              <input id="noneofthese" type="radio" name="residentgotvisano" value="noneofthese">
+              None of these
+            </label>
+
           </fieldset>
         </div>
         <div class="form-group">
-          <a class="button" href="kidsconvictions">Continue</a>
+          <input class="button" type="submit" value="Continue">
         </div>
 
       </form>
