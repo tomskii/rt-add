@@ -1,0 +1,50 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Registered Traveller
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <a class="link-back" href="javascript:history.go(-1)">Back</a>
+
+      <h1 class="heading-medium">
+        Background checks
+      </h1>
+
+      <div class="panel panel-border-wide"><p>The background check on a child is the same as an adult check, this means we need to ask about criminal convictions.</p></div>
+
+      <form action="/kids3/kids-convictions-page" method="get" class="form">
+        <div class="form-group">
+
+            <p class="bold">Has your child ever been convicted of a criminal offence, including spent convictions, or been cautioned by the police?</p>
+            <p>You don't need to tell us about motoring offences or penalty points unless these were given in a court.</p>
+
+            <label for="convictionsyes" class="block-label">
+              <input id="convictionsyes" type="radio" name="convictions" value="yes">
+              Yes
+            </label>
+
+            <label for="convictionsno" class="block-label">
+              <input id="convictionsno" type="radio" name="convictions" value="no">
+              No
+            </label>
+
+            </div>
+
+        <div class="form-group">
+          <input class="button" type="submit" value="Continue">
+        </div>
+
+      </form>
+
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}

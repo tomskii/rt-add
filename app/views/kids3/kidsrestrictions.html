@@ -1,0 +1,48 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Registered Traveller
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <a class="link-back" href="javascript:history.go(-1)">Back</a>
+
+      <h1 class="heading-medium">
+        Background checks
+      </h1>
+
+      <form action="/kids3/kids-restrictions-page" method="get" class="form">
+
+    <div class="form-group">
+
+    <p class="bold">Has your child ever been refused entry to the UK or had restrictions put on their entry?</p>
+
+    <label for="restrictionsyes" class="block-label">
+      <input id="restrictionsyes" type="radio" name="restrictions" value="yes">
+      Yes
+    </label>
+
+    <label for="restrictionsno" class="block-label">
+      <input id="restrictionsno" type="radio" name="restrictions" value="no">
+      No
+    </label>
+
+</div>
+
+        <div class="form-group">
+          <input class="button" type="submit" value="Continue">
+        </div>
+
+      </form>
+
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}

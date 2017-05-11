@@ -106,7 +106,7 @@ if (answer === 'kids2tourism') {
    }
 })
 
-// kids2 convictions laogic
+// kids2 convictions logic
 router.get('/kids2/kids-convictions-page', function (req, res) {
   var convictions = req.query.convictions
 
@@ -117,7 +117,7 @@ if (convictions === 'no') {
    }
 })
 
-// kids2 restrictions laogic
+// kids2 restrictions logic
 router.get('/kids2/kids-restrictions-page', function (req, res) {
   var restrictions = req.query.restrictions
 
@@ -129,7 +129,7 @@ if (restrictions === 'no') {
 })
 module.exports = router
 
-// kids2 restrictions laogic
+// kids2 restrictions logic
 router.get('/kids2/kids-regulations-page', function (req, res) {
   var regulations = req.query.regulations
 
@@ -140,7 +140,7 @@ if (regulations === 'no') {
    }
 })
 
-// kids2 resident visa laogic
+// kids2 resident visa logic
 router.get('/kids2/resident-gotvisa', function (req, res) {
   var kids2residentvisa = req.query.kids2residentvisa
 
@@ -174,5 +174,106 @@ if (residentgotvisano === 'noneofthese') {
      res.render('kids2/kidsconvictions')
    }
 })
+
+// ********** end kids2 logic ************
+
+// ------------ start of kids v3 logic ----------------
+
+router.get('/kids3reason', function (req, res) {
+  // get the answer from the query string (eg. ?answer=a)
+  var answer = req.query.answer
+
+if (answer === 'kids3tourism') {
+  res.redirect('/kids3/kidsconvictions')
+
+} else if (answer === 'kids3transit') {
+   res.redirect('/kids3/kidsconvictions')
+
+ } else if (answer === 'kids3medical') {
+   res.redirect('/kids3/kidsconvictions')
+
+ } else if (answer === 'kids3study') {
+   res.redirect('/kids3/study-visa')
+
+ } else if (answer === 'kids3resident') {
+   res.redirect('/kids3/resident-visa')
+
+ } else if (answer === 'kids3diplomatic') {
+   res.redirect('/kids3/kidsconvictions')
+
+ } else {
+     res.render('kids3/kidsconvictions')
+   }
+})
+
+// kids3reason convictions logic
+router.get('/kids3/kids-convictions-page', function (req, res) {
+  var convictions = req.query.convictions
+
+if (convictions === 'no') {
+   res.redirect('/kids3/kidsrestrictions')
+ } else {
+   res.render('kids3/ineligible')
+   }
+})
+
+// kids3transit restrictions logic
+router.get('/kids3/kids-restrictions-page', function (req, res) {
+  var restrictions = req.query.restrictions
+
+if (restrictions === 'no') {
+   res.redirect('/kids3/kidsregulations')
+ } else {
+   res.render('kids3/ineligible')
+   }
+})
+module.exports = router
+
+// kids3 restrictions logic
+router.get('/kids3/kids-regulations-page', function (req, res) {
+  var regulations = req.query.regulations
+
+if (regulations === 'no') {
+   res.redirect('/kids3/passport-number')
+ } else {
+   res.render('kids3/ineligible')
+   }
+})
+
+// kids3 resident visa logic
+router.get('/kids3/resident-gotvisa', function (req, res) {
+  var kids2residentvisa = req.query.kids2residentvisa
+
+if (kids2residentvisa === 'no') {
+   res.redirect('/kids3/resident-gotvisa-no')
+ } else {
+   res.render('kids3/resident-gotvisa-yes')
+   }
+})
+
+// kids study visa logic
+router.get('/kids3/study-gotvisa', function (req, res) {
+  var kids2studyvisa = req.query.kids2studyvisa
+
+if (kids2studyvisa === 'no') {
+   res.redirect('/kids3/ineligible')
+ } else {
+   res.render('kids3/kidsconvictions')
+   }
+})
+
+// kids resident got visa no page /kids3/resident-gotvisa-no
+
+router.get('/kids3residentnoreason', function (req, res) {
+  // get the answer from the query string (eg. ?answer=a)
+  var residentgotvisano = req.query.residentgotvisano
+
+if (residentgotvisano === 'noneofthese') {
+  res.redirect('/kids3/ineligible')
+ } else {
+     res.render('kids3/kidsconvictions')
+   }
+})
+
 
 module.exports = router

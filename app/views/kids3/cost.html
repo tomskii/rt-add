@@ -1,0 +1,82 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Cost to add your child
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+<a class="link-back" href="javascript:history.go(-1)">Back</a>
+
+  <h1 class="heading-large">
+    Cost to add your child
+  </h1>
+
+<div class="column-two-thirds" style="padding: 0 0 30px 0">
+
+  <p>Your membership expires in 3 months and 20 days on 20 July 2017<br>The cost of adding a child to your membership will be £28</p>
+
+  <!--<p>Your membership expires in 3 months and 20 days on 20 July 2017</p>
+
+  <p>Your child will be 18 years old on 3 June 2017. Their membership will expire on 2 June 2017. They will need to <a href="#">reapply for adult membership</a> from this date.</p>
+
+  <p>The cost of adding a child to your membership will be £26</p>
+  <div class="form-group">-->
+
+    <table class="check-your-answers">
+
+      <thead>
+        <tr>
+          <th colspan="2">
+            Cost breakdown
+          </th>
+
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <td>
+            Administration fee
+          </td>
+          <td style="text-align: right">
+            £20
+          </td>
+
+        </tr>
+
+        <tr>
+          <td>
+            Membership cost (£2 per month)
+          </td>
+          <td style="text-align: right">
+            £8
+          </td>
+
+        </tr>
+
+        <tr>
+          <td>
+
+          </td>
+          <td style="font-weight:bold; text-align: right">
+            Total cost £28
+          </td>
+
+        </tr>
+
+      </tbody>
+    </table>
+  </div>
+  <div class="form-group">
+    <a class="button" href="nationality" id="continuebutton">Continue with adding your child</a>
+  </div>
+  <div class="form-group">
+    <a href="https://www.gov.uk/">Exit to GOV.UK</a>
+  </div>
+</div>
+</main>
+
+{% endblock %}

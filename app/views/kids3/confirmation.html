@@ -1,0 +1,40 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Card selection
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <div class="govuk-box-highlight">
+        <h1 class="bold-large">Application submitted</h1>
+        <p>
+          Your application reference is <br>
+          <strong class="heading-medium">JV5E2JNJ</strong>
+        </p>
+      </div>
+      <p>We have received your payment of £28 for {{givennames}} {{surname}} and sent a confirmation email to <a href="mailto:">email@gmail.com</a>.</p>
+    		<p>Please add <a href="mailto:">RTinbox@homeoffice.gsi.gov.uk</a> to your contacts or safe senders list. Otherwise, our emails may go into your junk or spam folder.</p>
+
+    	<h2 class="bold-small">What happens next?</h2>
+
+    	<p>We will carry out background checks to see if your child is eligible to join.</p>
+
+    	<p>We will email you with our decision and further instructions within 10 working days. </p>
+
+
+      <p><a href="/prototype-admin/clear-data" class="button">Add another child</a></p>
+      <div class="form-group">
+      <p><a href="#">What do you think of this service?</a></p>
+    </div>
+    </div>
+  </div>
+
+</main>
+
+{% endblock %}

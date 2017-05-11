@@ -1,0 +1,71 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Card selection
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+  <form action="/make-payment" method="post" class="form">
+
+                  <h1 class="heading-medium" data-lang="eng">Select your credit or debit payment method</h1>
+                  <div class="form-group">
+                      <fieldset id="card">
+  												<div class="split-width clearfix">
+                          <p data-lang="eng">Charge: £28</p>
+
+  											</div>
+
+                        <label for="visa" class="block-label">
+                          <input id="visa" type="radio" name="card" value="visa">
+                          <span class="card visa"></span>
+                          VISA
+                        </label>
+
+                        <label for="master" class="block-label">
+                          <input id="master" type="radio" name="card" value="master">
+                          <span class="card mastercard"></span>
+                          Mastercard
+                        </label>
+
+                        <label for="maestro" class="block-label">
+                          <input id="maestro" type="radio" name="card" value="maestro">
+                          <span class="card maestro"></span>
+                          Maestro
+                        </label>
+
+                        <label for="japan" class="block-label">
+                          <input id="japan" type="radio" name="card" value="japan">
+                          <span class="card jcb"></span>
+                          Japanese Credit Bank
+                        </label>
+
+                        <label for="amex" class="block-label">
+                          <input id="amex" type="radio" name="card" value="amex">
+                          <span class="card amex"></span>
+                          American Express
+                        </label>
+
+                      </fieldset>
+                    </div>
+                    <div class="form-group">
+                  <div class="panel panel-border-wide" data-lang="eng"><p>After you've paid on WorldPay we will confirm receipt of your application and payment. You cannot amend this application after you have paid.</p></div>
+  							</div>
+                  <!-- Submit -->
+
+  								<div class="form-group">
+  									<a class="button" href="payment" id="continuebutton">Continue to payment</a>
+  								</div>
+
+  								</div>
+              </form>
+</div>
+</div>
+</main>
+
+{% endblock %}
