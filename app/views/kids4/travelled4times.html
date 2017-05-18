@@ -1,0 +1,46 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Registered Traveller
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <a class="link-back" href="javascript:history.go(-1)">Back</a>
+
+      <h1 class="heading-medium">
+        Has your child travelled to the UK 4 times or more in the last 24 months?
+      </h1>
+
+      <form action="/kids4/kidstravelled4times" method="get" class="form">
+        <div class="form-group">
+          <fieldset>
+
+            <label for="yes" class="block-label">
+              <input id="yes" type="radio" name="kidstravelled4times" value="yes">
+              Yes
+            </label>
+
+            <label for="no" class="block-label">
+              <input id="no" type="radio" name="kidstravelled4times" value="no">
+              No
+            </label>
+
+          </fieldset>
+        </div>
+        <div class="form-group">
+          <input class="button" type="submit" value="Continue">
+        </div>
+
+      </form>
+
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}

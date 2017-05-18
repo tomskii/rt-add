@@ -1,0 +1,65 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Registered Traveller
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <a class="link-back" href="javascript:history.go(-1)">Back</a>
+
+      <h1 class="heading-medium">
+        Why is your child coming to the UK with you?
+      </h1>
+
+      <form action="/kids4reason" method="get" class="form">
+        <div class="form-group">
+          <fieldset>
+
+            <label for="kids3tourism" class="block-label">
+              <input id="kids3tourism" type="radio" name="answer" value="kids3tourism">
+              Tourism (including visiting family or friends)
+            </label>
+
+            <label for="kids3resident" class="block-label">
+              <input id="kids3resident" type="radio" name="answer" value="kids3resident">
+              They are a resident in the UK
+            </label>
+
+            <label for="kids3study" class="block-label">
+              <input id="kids3study" type="radio" name="answer" value="kids3study">
+              To study
+            </label>
+
+            <label for="kids3transit" class="block-label">
+              <input id="kids3transit" type="radio" name="answer" value="kids3transit">
+              Passing through the UK (in transit)
+            </label>
+
+            <label for="kids3diplomatic" class="block-label">
+              <input id="kids3diplomatic" type="radio" name="answer" value="kids3diplomatic">
+              As a member of a diplomatic household
+            </label>
+
+            <label for="kids3medical" class="block-label">
+              <input id="kids3medical" type="radio" name="answer" value="kids3medical">
+              For private medical treatment
+            </label>
+
+          </fieldset>
+        </div>
+        <div class="form-group">
+          <input class="button" type="submit" value="Continue">
+        </div>
+
+      </form>
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}

@@ -1,0 +1,49 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Registered Traveller
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <a class="link-back" href="javascript:history.go(-1)">Back</a>
+
+      <h1 class="heading-medium">
+        Background checks
+      </h1>
+
+      <form action="/kids4/kids-regulations-page" method="get" class="form">
+
+
+    <div class="form-group">
+
+    <p class="bold">Has your child ever had penalties or action taken against them for breaking customs laws or regulations?</p>
+
+    <label for="regulationsyes" class="block-label">
+      <input id="regulationsyes" type="radio" name="regulations" value="yes">
+      Yes
+    </label>
+
+    <label for="regulationsno" class="block-label">
+      <input id="regulationsno" type="radio" name="regulations" value="no">
+      No
+    </label>
+
+</div>
+
+        <div class="form-group">
+          <input class="button" type="submit" value="Continue">
+        </div>
+
+      </form>
+
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}

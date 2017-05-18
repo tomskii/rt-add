@@ -1,0 +1,51 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Registered Traveller
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <a class="link-back" href="javascript:history.go(-1)">Back</a>
+
+      <h1 class="heading-medium">
+        When does your child’s passport expire?
+      </h1>
+<form action="passport-name" method="post" class="form">
+        <div class="form-group">
+          <fieldset>
+            <div class="form-date">
+              <p>For example, 30 4 2024</p>
+              <div class="form-group form-group-day">
+                <label for="exp-day">Day</label>
+                <input class="form-control" id="exp-day" type="number" pattern="[0-9]*" min="0" max="31" name="expday" value="{{expday}}">
+              </div>
+              <div class="form-group form-group-month">
+                <label for="exp-month">Month</label>
+                <input class="form-control" id="exp-month" type="number" pattern="[0-9]*" min="0" max="12" name="expmonth" value="{{expmonth}}">
+              </div>
+              <div class="form-group form-group-year">
+                <label for="exp-year">Year</label>
+                <input class="form-control" id="exp-year" type="number" pattern="[0-9]*" min="0" max="2054" name="expyear" value="{{expyear}}">
+              </div>
+            </div>
+          </fieldset>
+        </div>
+
+
+        <div class="form-group">
+          <input type="submit" class="button" value="Continue">
+        </div>
+
+      </form>
+
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}

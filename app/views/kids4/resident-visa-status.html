@@ -1,0 +1,77 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Registered Traveller
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <a class="link-back" href="javascript:history.go(-1)">Back</a>
+
+      <h1 class="heading-medium">
+        What visa, permit or immigration status do they have?
+      </h1>
+
+      <form action="/kids4residentvisastatus" method="get" class="form">
+        <div class="form-group">
+          <fieldset>
+            <label for="deptier124" class="block-label">
+              <input id="deptier124" type="radio" name="residentvisastatus" value="deptier124">
+            Dependant of Tier 1, 2 or 4
+            </label>
+
+            <label for="deptier5" class="block-label">
+              <input id="deptier5" type="radio" name="residentvisastatus" value="deptier5">
+              Dependant of Tier 5
+            </label>
+
+
+            <label for="ancestry" class="block-label">
+              <input id="ancestry" type="radio" name="residentvisastatus" value="ancestry">
+              Dependant of UK Ancestry
+            </label>
+
+            <label for="ilr" class="block-label">
+              <input id="ilr" type="radio" name="residentvisastatus" value="ilr">
+              Indefinite leave to remain
+            </label>
+
+            <label for="naturalisation" class="block-label">
+              <input id="naturalisation" type="radio" name="residentvisastatus" value="naturalisation">
+              Naturalisation
+            </label>
+
+            <label for="roa" class="block-label">
+              <input id="roa" type="radio" name="residentvisastatus" value="roa">
+              Right of abode
+            </label>
+
+            <label for="eea" class="block-label">
+              <input id="eea" type="radio" name="residentvisastatus" value="eea">
+              EEA indefinite leave
+            </label>
+
+            <label for="othervisa" class="block-label">
+              <input id="othervisa" type="radio" name="residentvisastatus" value="othervisa">
+              Other visa
+            </label>
+
+
+
+          </fieldset>
+        </div>
+        <div class="form-group">
+          <a href="kidsconvictions" class="button">Continue</a>
+        </div>
+
+      </form>
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}

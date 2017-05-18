@@ -1,0 +1,58 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Registered Traveller
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="column-two-thirds">
+<form action="date-of-birth" method="post" class="form">
+      <div class="form-group">
+<h1 class="heading-large">Add your child to your membership</h1>
+
+				<div class="form-group">
+          <fieldset>
+						<label class="form-label-bold label signinlabel" for="regNumber">Your Registered Traveller number</label>
+						<input type="text" class="form-control" id="regNumber" name="regNumber" autocomplete="off">
+          </fieldset>
+				</div>
+
+<div class="date-group">
+		<fieldset>
+				<label class="form-label-bold date-field label signinlabel" for="signInDob">
+						Your date of birth <span class="visuallyhidden">expected format is DD/MM/YYY</span></label>
+				<div class="form-date" id="signInDob">
+						<p>For example, 21 3 1979</p>
+						<div class="form-group form-group-day">
+								<label for="exp-day"><span class="visuallyhidden">New passport expiry date </span>Day <span class="visuallyhidden">expected format DD. Required</span></label>
+								<input autocomplete="off" type="text" class="form-control" id="exp-day" name="expiryDate_day"
+											 aria-required="true" value="" maxlength="2">
+						</div>
+						<div class="form-group form-group-month">
+								<label for="exp-month"><span class="visuallyhidden">New passport expiry date </span>Month <span class="visuallyhidden">expected format MM. Required</span></label>
+								<input autocomplete="off" type="text" class="form-control" id="exp-month" name="expiryDate_month"
+											 aria-required="true" value="" maxlength="2">
+						</div>
+						<div class="form-group form-group-year">
+								<label for="exp-year"><span class="visuallyhidden">New passport expiry date </span>Year <span class="visuallyhidden">expected format YYYY. Required</span></label>
+								<input autocomplete="off" type="text" class="form-control" id="exp-year" name="expiryDate_year"
+											 aria-required="true" value="" maxlength="4">
+						</div>
+				</div>
+		</fieldset>
+</div>
+</div>
+
+	<div class="form-group">
+    <input class="button clearStorage" type="submit" value="Continue">
+	</div>
+
+</form>
+    </div>
+  </div>
+</main>
+
+{% endblock %}

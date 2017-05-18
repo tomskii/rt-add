@@ -251,7 +251,7 @@ if (kids2residentvisa === 'no') {
    }
 })
 
-// kids study visa logic
+// kids3 study visa logic
 router.get('/kids3/study-gotvisa', function (req, res) {
   var kids2studyvisa = req.query.kids2studyvisa
 
@@ -275,5 +275,81 @@ if (residentgotvisano === 'noneofthese') {
    }
 })
 
+// ********** end kids3 logic ************
+
+// ------------ start of kids v4 logic ----------------
+
+router.get('/kids4reason', function (req, res) {
+  // get the answer from the query string (eg. ?answer=a)
+  var answer = req.query.answer
+
+if (answer === 'kids3tourism') {
+  res.redirect('/kids4/travelled4times')
+
+} else if (answer === 'kids3transit') {
+   res.redirect('/kids4/travelled4times')
+
+ } else if (answer === 'kids3medical') {
+   res.redirect('/kids4/travelled4times')
+
+ } else if (answer === 'kids3study') {
+   res.redirect('/kids4/study-visa')
+
+ } else if (answer === 'kids3resident') {
+   res.redirect('/kids4/resident-visa-status')
+
+ } else if (answer === 'kids3diplomatic') {
+   res.redirect('/kids4/kidsconvictions')
+
+ } else {
+     res.render('kids4/kidsconvictions')
+   }
+})
+
+// travelled4times.html logic
+router.get('/kids4/kidstravelled4times', function (req, res) {
+  var kidstravelled4times = req.query.kidstravelled4times
+
+if (kidstravelled4times === 'no') {
+   res.redirect('/kids4/ineligible')
+ } else {
+   res.render('kids4/kidsconvictions')
+   }
+})
+
+
+// kids3reason convictions logic
+router.get('/kids4/kids-convictions-page', function (req, res) {
+  var convictions = req.query.convictions
+
+if (convictions === 'no') {
+   res.redirect('/kids4/kidsrestrictions')
+ } else {
+   res.render('kids4/ineligible')
+   }
+})
+
+// kids3transit restrictions logic
+router.get('/kids4/kids-restrictions-page', function (req, res) {
+  var restrictions = req.query.restrictions
+
+if (restrictions === 'no') {
+   res.redirect('/kids4/kidsregulations')
+ } else {
+   res.render('kids4/ineligible')
+   }
+})
+module.exports = router
+
+// kids3 restrictions logic
+router.get('/kids4/kids-regulations-page', function (req, res) {
+  var regulations = req.query.regulations
+
+if (regulations === 'no') {
+   res.redirect('/kids4/passport-number')
+ } else {
+   res.render('kids4/ineligible')
+   }
+})
 
 module.exports = router
