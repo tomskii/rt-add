@@ -1,0 +1,45 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Payment
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+<h1 class="heading-medium">Enter your card details</h1>
+
+
+			<div class="form-group">
+				<label class="form-label-bold label" for="first-middle-names">Card number</label>
+				<input type="text" autocomplete="off" class="form-control" id="first-middle-names" name="first-middle-names" />
+			</div>
+
+			<div class="form-group">
+					<label class="bold-small label more-margin-below" for="passportExpiry" data-label="Passport expiry date">Expiry date</label>
+					<div class="form-date" id="passportExpiry">
+							<div class="form-group form-group-day">
+									<label for="exp-day">Month</label>
+									<input autocomplete="off" type="text" class="form-control" id="exp-day" name="expiryDate_day" maxlength="2">
+							</div>
+							<div class="form-group form-group-day">
+									<label for="exp-yr">Year</label>
+									<input autocomplete="off" type="text" class="form-control" id="exp-yr" name="expiryDate_day" maxlength="2">
+							</div>
+					</div>
+			</div>
+
+    <!-- Submit -->
+
+
+
+
+
+
+	<div class="form-group">
+		<a class="button" href="confirmation" id="continuebutton">Continue</a>
+	</div>
+
+</main>
+
+{% endblock %}
