@@ -318,7 +318,7 @@ if (kidstravelled4times === 'no') {
 })
 
 
-// kids3reason convictions logic
+// kids4reason convictions logic
 router.get('/kids4/kids-convictions-page', function (req, res) {
   var convictions = req.query.convictions
 
@@ -329,7 +329,7 @@ if (convictions === 'no') {
    }
 })
 
-// kids3transit restrictions logic
+// kids4transit restrictions logic
 router.get('/kids4/kids-restrictions-page', function (req, res) {
   var restrictions = req.query.restrictions
 
@@ -339,9 +339,8 @@ if (restrictions === 'no') {
    res.render('kids4/ineligible')
    }
 })
-module.exports = router
 
-// kids3 restrictions logic
+// kids4 restrictions logic
 router.get('/kids4/kids-regulations-page', function (req, res) {
   var regulations = req.query.regulations
 
@@ -351,5 +350,128 @@ if (regulations === 'no') {
    res.render('kids4/ineligible')
    }
 })
+
+// ********** end kids4 logic ************
+
+// ------------ start renewals-it3 logic ---------------
+
+// renewals-it3/passport-changed page logic
+
+router.get('/RenewalsPassportChanged', function (req, res) {
+  var changed = req.query.changed
+  if (changed === 'no') {
+     res.redirect('/renewals-it3/visa-changed')
+   } else {
+     res.render('renewals-it3/passport-nationality')
+     }
+  })
+
+// renewals-it3/visa-changed page logic
+
+  router.get('/RenewalsVisaChanged', function (req, res) {
+    var changed = req.query.changed
+    if (changed === 'no') {
+       res.redirect('/renewals-it3/email')
+     } else {
+       res.render('renewals-it3/why-are-you-coming')
+       }
+    })
+
+// renewals-it3/RenewalsEligible page logic
+
+    router.get('/RenewalsEligible', function (req, res) {
+      // get the answer from the query string (eg. ?answer=a)
+      var answer = req.query.answer
+
+    if (answer === 'married') {
+       res.redirect('/renewals-it3/email')
+     } else if (answer === 'businesswork') {
+       res.redirect('/renewals-it3/businesswork-visa')
+     } else if (answer === 'study') {
+       res.redirect('/renewals-it3/academicstudy-visa')
+     } else if (answer === 'resident') {
+       res.redirect('/renewals-it3/resident')
+     } else if (answer === 'partner') {
+       res.redirect('/renewals-it3/partner-visa')
+     } else if (answer === 'work') {
+       res.redirect('/renewals-it3/work-visa')
+     } else if (answer === 'diplomat') {
+       res.redirect('/renewals-it3/diplomat-visa')
+     } else if (answer === 'diplomatv2') {
+       res.redirect('/renewals-it3/diplomat-visa')
+     } else {
+         res.render('renewals-it3/email')
+       }
+    })
+
+
+// /renewals-it3/business-visa.html page logic
+
+    router.get('/RenewalBusinessGotvisa', function (req, res) {
+  var businessvisa = req.query.businessvisa
+
+if (businessvisa === 'no') {
+   res.redirect('/renewals-it3/businesswork-novisa')
+ } else {
+     res.render('renewals-it3/businesswork-whichvisa')
+   }
+})
+
+router.get('/RenewalBusinessWorkNovisa', function (req, res) {
+  var businesswork6months = req.query.businesswork6months
+
+if (businesswork6months === 'no') {
+   res.redirect('/renewals-it3/whatwillyoubedoing')
+ } else {
+     res.render('renewals-it3/email')
+   }
+})
+
+// /renewals-it3/academicstudy-visa.html logic
+
+router.get('/RenewalsAcademicstudyVisapage', function (req, res) {
+  var academicstudyvisapage = req.query.academicstudyvisapage
+
+if (academicstudyvisapage === 'yes') {
+   res.redirect('/renewals-it3/email')
+ } else {
+     res.render('renewals-it3/academicstudy-novisa')
+   }
+})
+
+// /renewals-it3/academicstudy-novisa.html logic
+
+router.get('/RenewalsAcademicstudy6months', function (req, res) {
+  var academicstudy6months = req.query.academicstudy6months
+
+if (academicstudy6months === 'no') {
+   res.redirect('/renewals-it3/whatwillyoubedoing-academic')
+ } else {
+     res.render('renewals-it3/email')
+   }
+})
+
+// /renewals-it3/partner-visa.html logic
+
+router.get('/RenewalsPartnerGotvisa', function (req, res) {
+  var partnervisa = req.query.partnervisa
+
+if (partnervisa === 'no') {
+   res.redirect('/renewals-it3/email')
+ } else {
+     res.render('renewals-it3/partner-page')
+   }
+})
+
+router.get('/RenewalsDiplomatGotvisa', function (req, res) {
+  var diplomatvisa = req.query.diplomatvisa
+
+if (diplomatvisa === 'no') {
+   res.redirect('/renewals-it3/diplomat-no-page')
+ } else {
+   res.render('renewals-it3/email')
+   }
+})
+
 
 module.exports = router
