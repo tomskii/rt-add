@@ -1,0 +1,57 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Registered Traveller
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="column-two-thirds">
+      <a class="link-back" href="javascript:history.go(-1)">Back</a>
+				<h1 class="heading-large">Renewals and updates</h1>
+				<p>You need to renew your membership before 16 June 2017. It costs £50 to renew.</p>
+				<p>At the same time as renewing you can update your details if they have changed.</p>
+		</div>
+</div>
+<div class="form-group">
+  <h2 class="heading-medium">Bill Smith</h2>
+<table class="borderTop">
+	<thead>
+		<tr>
+			<th colspan="2">
+			</th>
+			<th class="heading-small align-right">
+				Cost to update
+			</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>Passport number</td>
+			<td>*****3123</td>
+			<td class="align-right">£20</td>
+		</tr>
+		<tr>
+			<td>Visa, permit or travel purpose</td>
+			<td>Indefinite leave to remain</td>
+			<td class="align-right">No cost</td>
+		</tr>
+		<tr>
+			<td>Email</td>
+			<td>billsmith@hotmail.com</td>
+			<td class="align-right">No cost</td>
+		</tr>
+	</tbody>
+</table>
+</div>
+<div class="form-group">
+
+<a class="button" href="passport-changed.html">Renew your membership &ndash; £50</a>
+
+</div>
+<a href="passport-changed.html">I just want to update my details - I’ll renew another time</a>
+
+</main>
+{% endblock %}
