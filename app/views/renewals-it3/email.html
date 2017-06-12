@@ -12,7 +12,7 @@
 
       <a class="link-back" href="javascript:history.go(-1)">Back</a>
 
-      <form action="gender" method="post" class="form">
+      <form action="/renewals-it3/summary" method="post" class="form">
 
         <h1 class="heading-medium">
           Is billsmith@hotmail.com your email address?
@@ -33,18 +33,16 @@
               <div class="panel panel-border-narrow js-hidden" id="add-other-names">
                 <fieldset>
                   <div class="form-group">
-                    <label class="form-label-bold" for="address-line-1">What is your new email address?</label>
+                    <label class="form-label-bold" for="email">What is your new email address?</label>
                     <!--<span class="form-label">Enter these even if they haven’t changed</span>-->
-                    <input class="form-control" autocomplete="off" type="text" id="address-line-1" name="otherfirstname" value="{{otherfirstname}}">
+                    <input class="form-control form-wider" autocomplete="off" type="text" id="email" name="email" value="{{email}}">
                   </div>
                 </fieldset>
-
               </div>
-
             </fieldset>
           </div>
         <div class="form-group">
-          <a class="button" href="summary.html">Continue</a>
+          <input type="submit" class="button" value="Continue">
         </div>
 
     </div>

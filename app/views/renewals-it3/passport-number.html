@@ -16,16 +16,15 @@
         What is your new passport number?
       </h1>
       <p>Use the number on their passport photo page, include any zeros at the start</p>
-      <form action="/RenewalsPassportNumber" method="post" class="form">
+      <form action="/renewals-it3/passport-expiry" method="post" class="form">
         <div class="form-group">
           <fieldset>
             <input type="text" class="form-control" id="passport-number" name="passportnumber" autocomplete="off" value="{{passportnumber}}">
-
           </fieldset>
         </div>
 
         <div class="form-group">
-          <a class="button" href="passport-expiry">Continue</a>
+          <input type="submit" class="button" value="Continue">
         </div>
 
       </form>
