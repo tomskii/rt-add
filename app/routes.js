@@ -283,28 +283,20 @@ router.get('/kids4reason', function (req, res) {
   // get the answer from the query string (eg. ?answer=a)
   var answer = req.query.answer
 
-if (answer === 'kids3tourism') {
-  res.redirect('/kids4/travelled4times')
+  if (answer === 'kids3study') {
+     res.redirect('/kids4/study-visa')
 
-} else if (answer === 'kids3transit') {
-   res.redirect('/kids4/travelled4times')
+   } else if (answer === 'kids3resident') {
+     res.redirect('/kids4/resident-visa-status')
 
- } else if (answer === 'kids3medical') {
-   res.redirect('/kids4/travelled4times')
+   } else if (answer === 'kids3diplomatic') {
+     res.redirect('/kids4/kidsconvictions')
 
- } else if (answer === 'kids3study') {
-   res.redirect('/kids4/study-visa')
+   } else {
+       res.render('kids4/kidsconvictions')
+     }
+  })
 
- } else if (answer === 'kids3resident') {
-   res.redirect('/kids4/resident-visa-status')
-
- } else if (answer === 'kids3diplomatic') {
-   res.redirect('/kids4/kidsconvictions')
-
- } else {
-     res.render('kids4/kidsconvictions')
-   }
-})
 
 // travelled4times.html logic
 router.get('/kids4/kidstravelled4times', function (req, res) {
