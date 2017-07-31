@@ -1,0 +1,34 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Registered Traveller
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <a class="link-back" href="javascript:history.go(-1)">Back</a>
+
+  <form action="/renewals-it3/summary" method="post" class="form">
+
+    <h1 class="heading-medium">
+        Check your email
+      </h1>
+
+      <form action="passport-expiry" method="post" class="form">
+        <div class="form-group">
+          <fieldset>
+            <input type="text" class="form-control" id="email-check" name="email-check" autocomplete="off" value="{{email}}">
+          </fieldset>
+        </div>
+    <div class="form-group">
+      <input type="submit" class="button" value="Yes - my email is correct">
+    </div>
+    <p>If your email is wrong just change it above</p>
+  </form>
+</div>
+</div>
+</main>
+{% endblock %}
